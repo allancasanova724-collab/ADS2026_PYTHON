@@ -1,0 +1,28 @@
+import math
+
+a = 5
+b = 10
+c = 7
+
+delta = b**2 - 4*a*c
+
+if delta < 0:
+    print("Não existem raízes reais.")
+
+elif delta == 0:
+    x = -b / (2*a)
+    print(f"A raiz da equação é: {x}")
+
+else:
+    def equação2grau1(a, b, c):
+        delta = b**2 - 4*a*c
+        x1 = (-b + math.sqrt(delta)) / (2*a)
+        return x1
+
+    def equação2grau2(a, b, c):
+        delta = b**2 - 4*a*c
+        x2 = (-b - math.sqrt(delta)) / (2*a)
+        return x2
+
+    print(f"A primeira raiz da equação é: {equação2grau1(a, b, c)}")
+    print(f"A segunda raiz da equação é: {equação2grau2(a, b, c)}")
